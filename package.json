@@ -1,0 +1,34 @@
+{
+  "name": "whois-cli",
+  "description": "CLI for WHOIS given a url.",
+  "author": "John Otander",
+  "version": "0.0.1",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "bin": {
+    "whois": "./index.js"
+  },
+  "scripts": {
+    "test": "mocha test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/johnotander/whois-cli.git"
+  },
+  "keywords": [],
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/johnotander/whois-cli/issues"
+  },
+  "homepage": "https://github.com/johnotander/whois-cli",
+  "dependencies": {
+    "is-url": "^1.2.1",
+    "meow": "^3.3.0",
+    "node-whois": "^2.1.0"
+  },
+  "devDependencies": {
+    "mocha": "*"
+  }
+}
