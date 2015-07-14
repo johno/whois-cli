@@ -7,15 +7,13 @@ CLI for WHOIS given a url.
 ## Installation
 
 ```bash
-npm install --save whois-cli
+npm i -g  whois-cli
 ```
 
 ## Usage
 
 ```javascript
-var whoisCli = require('whois-cli');
-
-whoisCli();  // => true
+whois google.com
 ```
 
 ## License
