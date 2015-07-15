@@ -1,6 +1,4 @@
-# whois-cli
-
-[![Build Status](https://secure.travis-ci.org/johnotander/whois-cli.png?branch=master)](https://travis-ci.org/johnotander/whois-cli)
+# whois-cli [![Build Status](https://secure.travis-ci.org/johnotander/whois-cli.png?branch=master)](https://travis-ci.org/johnotander/whois-cli)
 
 CLI for WHOIS given a url.
 
