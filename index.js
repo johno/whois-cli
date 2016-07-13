@@ -2,29 +2,54 @@
 
 'use strict'
 
-var meow = require('meow')
-var isUrl = require('is-url')
-var whois = require('node-whois')
-var normalizeUrl = require('normalize-url')
+const meow = require('meow')
+const shtml = require('shtml')
+const isUrl = require('is-url')
+const whois = require('node-whois')
+const isPresent = require('is-present')
+const normalizeUrl = require('normalize-url')
 
-var cli = meow({
-  help: [
-    'Example',
-    '  whois google.com'
-  ]
+const cli = meow(shtml`
+  <div>
+    <underline>Usage</underline>
+
+    $ whois [url]<br><br>
+
+    <underline>Options</underline>
+
+    -h, --help - Get help menu
+    -v, --version - Get the version<br><br>
+
+    <underline>Example</underline>
+
+    $ whois johnotander.com
+    $ whois www.google.com
+    $ whois -v
+    $ whois -h
+  </div>
+`, {
+	alias: {
+		v: 'version',
+		h: 'help'
+	}
 })
 
-var url = cli.input[0] && normalizeUrl(cli.input[0])
+const url = isPresent(cli.input[0]) && normalizeUrl(cli.input[0])
 
 if (isUrl(url)) {
-  whois.lookup(cli.input[0], function(err, data) {
+  whois.lookup(cli.input[0], (err, data) => {
     if (err) {
-      console.log('whois-cli encountered an error')
-      console.log(err)
+      console.error(shtml`
+        <red>whois-cli encountered an error</red>
+      `)
+      console.error(err)
     } else {
       console.log(data)
     }
   })
 } else {
-  console.log('Please provide a valid url')
+  console.error(shtml`
+    <red>Please provide a valid url</red>
+  `)
+  process.exit(1)
 }

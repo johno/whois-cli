@@ -1,4 +1,4 @@
-# whois-cli [![Build Status](https://secure.travis-ci.org/johnotander/whois-cli.png?branch=master)](https://travis-ci.org/johnotander/whois-cli)
+# whois-cli [![Build Status](https://secure.travis-ci.org/johnotander/whois-cli.svg?branch=master)](https://travis-ci.org/johnotander/whois-cli)
 
 CLI for WHOIS given a url.
 
@@ -11,7 +11,25 @@ npm i -g  whois-cli
 ## Usage
 
 ```javascript
-whois google.com
+whois -h
+
+  CLI for WHOIS given a url.
+
+  Usage
+
+      $ whois [url]
+
+  Options
+
+      -h, --help - Get help menu
+      -v, --version - Get the version
+
+  Example
+
+      $ whois johnotander.com
+      $ whois www.google.com
+      $ whois -v
+      $ whois -h
 ```
 
 ## License
