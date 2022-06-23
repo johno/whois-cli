@@ -5,7 +5,7 @@
 const meow = require('meow')
 const shtml = require('shtml')
 const isUrl = require('is-url')
-const whois = require('node-whois')
+const whois = require('whois')
 const isPresent = require('is-present')
 const normalizeUrl = require('normalize-url')
 
