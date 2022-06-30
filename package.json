@@ -2,7 +2,7 @@
   "name": "whois-cli",
   "description": "CLI for WHOIS given a url.",
   "author": "John Otander",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "main": "index.js",
   "bin": {
     "whois": "index.js"
